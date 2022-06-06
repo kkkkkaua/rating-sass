@@ -1,15 +1,22 @@
 let selectedOption = 0;
 
 function validate() {
-  const button = document.querySelector("#submit-button");
+  if (selectedOption === 0) {
+    alert("Please, choose a possible option.");
+    return;
+  }
+
+  
 }
 
-function start(number) {
+function start() {
   const options = document.querySelectorAll(".options button");
+  const button = document.querySelector("#submit-button");
+  button.addEventListener("click", validate);
 
   options.forEach((option) => {
     option.addEventListener("click", () => {
-      console.log(parseInt(option.textContent));
+      selectedOption = parseInt(option.textContent);
     });
   });
 }
