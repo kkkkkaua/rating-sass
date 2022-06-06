@@ -6,6 +6,8 @@ function validate(event) {
     alert("Please, choose a possible option.");
     return;
   }
+
+  localStorage.setItem("selectedOption", selectedOption);
 }
 
 function start() {
