@@ -1,12 +1,11 @@
 let selectedOption = 0;
 
-function validate() {
+function validate(event) {
   if (selectedOption === 0) {
+    event.preventDefault();
     alert("Please, choose a possible option.");
     return;
   }
-
-  
 }
 
 function start() {
